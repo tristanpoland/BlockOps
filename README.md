@@ -53,7 +53,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mc-server-manager
+git clone https://github.com/tristanpoland/BlockOps
 cd mc-server-manager
 
 # Build and install
