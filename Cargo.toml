@@ -1,0 +1,17 @@
+[package]
+name = "blockops"
+version = "1.0.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A production-ready CLI tool for managing multiple Minecraft servers with Docker"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+colored = "2.0"
+dialoguer = "0.11"
+indicatif = "0.17"
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1.0"
