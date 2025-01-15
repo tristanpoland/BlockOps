@@ -28,8 +28,6 @@
 
 ## ✨ Features
 
-<div align="center">
-
 | Feature | Description |
 |---------|-------------|
 | 🚀 **Quick Setup** | Interactive server creation wizard |
@@ -42,7 +40,6 @@
 | 🎯 **Performance** | Memory and optimization options |
 | 🔄 **Auto-Restart** | Automatic recovery on system reboot |
 
-</div>
 
 ## 🚀 Installation
 
@@ -67,7 +64,6 @@ cargo install --path .
 
 ### Essential Commands
 
-<div align="center">
 
 | Command | Description |
 |---------|-------------|
@@ -82,11 +78,8 @@ cargo install --path .
 | `mc-server versions` | 📜 List available versions |
 | `mc-server remove <name>` | 🗑️ Remove server |
 
-</div>
-
 ### 🎲 Server Types
 
-<div align="center">
 
 | Type | Description | Best For |
 |------|-------------|----------|
@@ -97,7 +90,6 @@ cargo install --path .
 | 🔧 **SPIGOT** | Plugin Support | Plugin Users |
 | ⚡ **PURPUR** | Performance Focused | Optimization |
 
-</div>
 
 ## ⚙️ Configuration
 
@@ -140,18 +132,10 @@ cargo install --path .
 <details>
 <summary>🐳 Docker Problems</summary>
 
-1. Verify Docker is running
+1. Verify Docker is running and that you have permission to run docker commands
 2. Check container logs
 3. Restart Docker service
 </details>
-
-## 🔒 Security Best Practices
-
-- 🔄 Keep servers updated
-- 🛡️ Configure firewall rules
-- 💾 Regular backups
-- 📊 Monitor logs
-- 🔐 Secure ports
 
 ## 🤝 Contributing
 
