@@ -426,10 +426,7 @@ fn create_server() -> Result<()> {
                     ports: vec![format!("{}:25565", port)],
                     environment,
                     volumes: vec![
-                        format!("./{}:/data", server_name),
-                        format!("./{}:/mods", server_name),
-                        format!("./{}:/config", server_name),
-                        format!("./{}:/plugins", server_name),
+                        format!("{}:/data", data_path.to_string_lossy()),
                     ],
                     restart: "unless-stopped".to_string(),
                     stdin_open: true,
