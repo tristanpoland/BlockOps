@@ -631,7 +631,7 @@ fn attach_console(name: &str) -> Result<()> {
         println!("{}", "Type 'exit' or press Ctrl+P, Ctrl+Q to detach".bright_yellow());
         
         let status = ProcessCommand::new("docker")
-            .args(["attach", &format!("mc-{}", name)])
+            .args(["attach", &format!("mc-{}", name),"--sig-proxy=false"])
             .status()?;
 
         if !status.success() {
