@@ -630,13 +630,9 @@ fn attach_console(name: &str) -> Result<()> {
         println!("{}", format!("\nAttaching to server '{}' console:", name).bright_cyan());
         println!("{}", "Type 'exit' or press Ctrl+P, Ctrl+Q to detach".bright_yellow());
         
-        let status = ProcessCommand::new("docker")
-            .args(["attach", &format!("mc-{}", name),"--sig-proxy=false"])
+        let _ = ProcessCommand::new("docker")
+            .args(["exec", "-it", &format!("mc-{}", name),"rcon-cli"])
             .status()?;
-
-        if !status.success() {
-            return Err(ServerError::DockerCommandFailed("Failed to attach to console".to_string()));
-        }
     } else {
         return Err(ServerError::ServerNotFound(name.to_string()));
     }
