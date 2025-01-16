@@ -37,10 +37,10 @@ type Result<T> = std::result::Result<T, ServerError>;
 
 #[derive(Parser)]
 #[command(
-    name = "mc-server",
+    name = "BlockOps",
     about = "A production-ready CLI tool for managing multiple Minecraft servers with Docker",
-    version = "1.0.0",
-    author = "Your Name"
+    version = "0.2.0",
+    author = "Tristan J. Poland"
 )]
 struct Cli {
     #[command(subcommand)]
@@ -396,18 +396,6 @@ fn create_server() -> Result<()> {
         format!("VERSION={}", version),
         format!("TYPE={}", server_type),
     ];
-
-    // Add mod loader configuration if applicable
-    if let Some(loader) = &mod_loader {
-        environment.push(format!("TYPE={}", loader));
-        if let Some(loader_version) = &mod_loader_version {
-            match loader.as_str() {
-                "FORGE" => environment.push(format!("FORGE_VERSION={}", loader_version)),
-                "FABRIC" => environment.push(format!("FABRIC_VERSION={}", loader_version)),
-                _ => {}
-            }
-        }
-    }
 
     // Add Java arguments if specified
     if let Some(args) = &java_args {

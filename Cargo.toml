@@ -1,6 +1,6 @@
 [package]
 name = "blockops"
-version = "1.0.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["Your Name <your.email@example.com>"]
 description = "A production-ready CLI tool for managing multiple Minecraft servers with Docker"
